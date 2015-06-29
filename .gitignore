@@ -1,0 +1,12 @@
+*.html
+config.yaml
+pip-selfcheck.json
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+*.egg-info/
+*.egg
