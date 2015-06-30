@@ -1,0 +1,4 @@
+logging:
+    file: /var/log/fibonacci_service.log
+
+max_int: 4000

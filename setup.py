@@ -10,6 +10,7 @@ sys.path.append(dirname(__file__))
 # project dependencies
 install_requires = [
     'configurate==0.4.0',
+    'pyyaml==3.11',
     'flake8',
     'flask==0.10',
     'Flask-RESTful==0.3.3',

@@ -2,6 +2,7 @@ from flask import jsonify
 from flask.ext.restful import Resource
 from fibonacci_service import api
 from fibonacci_service.exceptions import InputParameterError
+from fibonacci_service.config import config
 
 
 class ComputeFibonacci(Resource):
@@ -9,8 +10,8 @@ class ComputeFibonacci(Resource):
     def get(self, base_num):
         try:
             base = int(base_num)
-            if base < 0 or base > 1000:
-                raise InputParameterError('Please supply an integer between 0 and 1000. Supplied {}'.format(base_num))
+            if base < 0 or base > config.max_int:
+                raise InputParameterError('Please supply an integer between 0 and {}. Supplied {}'.format(config.max_int, base_num))
         except ValueError:
             raise InputParameterError('Number {} is not a valid integer.'.format(base_num))
 

@@ -1,5 +1,4 @@
 *.html
-config.yaml
 pip-selfcheck.json
 
 # Byte-compiled / optimized / DLL files
