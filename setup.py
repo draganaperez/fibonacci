@@ -32,9 +32,11 @@ setup(
 
     entry_points={
         'console_scripts': [
-            #'fibonacci_api = app:run'
+            'fibonacci_api = run_service'
         ]
     },
+
+    test_suite='fibonacci_service.tests',
 
     zip_safe=False
 )

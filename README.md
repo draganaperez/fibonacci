@@ -20,12 +20,21 @@ To activate your virtual env and start the service in debug mode (on port 3300 w
 ```sh
 workon fib-dev 
 cdproject
-python run_service.py
+fibonacci_api
 ```
 To deactivate, while in current virtualenv
 ```sh
 deactivate
 ```
-[github project pages setup]:https://help.github.com/articles/creating-project-pages-manually/
-[raml2html]:https://www.npmjs.com/package/raml2html
+# Running unittests
+```sh
+python setup.py test
+```
+
+# Using the api
+Api allows integers between 0 and 1000
+```sh 
+curl http://localhost:5000/fibonacci/5
+"[0, 1, 1, 2, 3]"
+```
 [virtualenvwrapper]:http://virtualenvwrapper.readthedocs.org/en/latest/install.html
